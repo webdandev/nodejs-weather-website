@@ -26,22 +26,22 @@ app.use(express.static(publicDirectory));
 app.get('/', (req, res) => {
   res.render('index', {
     title: 'Weather',
-    name: 'DanG',
+    name: 'Dan Guth',
   });
 });
 
 app.get('/about', (req, res) => {
   res.render('about', {
     title: 'About Me',
-    name: 'DanG',
+    name: 'Dan Guth',
   });
 });
 
 app.get('/help', (req, res) => {
   res.render('help', {
     title: 'Help',
-    helpText: 'This is a simple html file with 2 dynamic values',
-    name: 'DanG',
+    helpText: 'Insert a location and we will (With our API calls) do the rest',
+    name: 'Dan Guth',
   });
 });
 
@@ -87,7 +87,7 @@ app.get('/help/*', (req, res) => {
   res.render('404', {
     title: '404',
     errorMessage: 'Help article not found.',
-    name: 'DanG',
+    name: 'Dan Guth',
   });
 });
 
@@ -95,7 +95,7 @@ app.get('*', (req, res) => {
   res.render('404', {
     title: '404',
     errorMessage: 'Page not found.',
-    name: 'DanG',
+    name: 'Dan Guth',
   });
 });
 
