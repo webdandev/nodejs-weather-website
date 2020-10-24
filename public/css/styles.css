@@ -54,3 +54,11 @@ button {
   color: white;
   padding: 8px;
 }
+
+form {
+  display: inline;
+}
+#location-btn {       
+  margin-left: 15px;
+  background: blueviolet;
+}
