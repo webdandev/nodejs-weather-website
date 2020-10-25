@@ -34,8 +34,10 @@ locationBtn.addEventListener('click', () => {
     const latitude = position.coords.latitude
     const longitude = position.coords.longitude
 
+    search.value = ''
     messageOne.textContent = 'Loading weather data'
     messageTwo.textContent=''
+    
 
     fetch('/location?latitude='+ latitude + '&longitude=' + longitude).then(response => {
       response.json().then((data) => {
@@ -43,7 +45,7 @@ locationBtn.addEventListener('click', () => {
           messageOne.textContent = data.error       
         } else {  
             messageOne.textContent = ''
-            messageTwo.textContent = data.forecast      
+            messageTwo.textContent = data.forecast     
         }
 
       })
